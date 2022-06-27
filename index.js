@@ -5,7 +5,7 @@ require('dotenv').config();
 const port = process.env.PORT || 5000;
 const app = express();
 
-//midekwore
+//midalwore
 app.use(cors())
 app.use(express.json())
 
@@ -41,7 +41,7 @@ async function run(){
             const count = await productCollection.estimatedDocumentCount()
             res.send({count})
         })
-        //use post by ids
+        //use post by ids//
         app.post('/productByKeys',async(req,res)=>{
             const keys = req.body;
             const ids = keys.map(id => ObjectId(id))
